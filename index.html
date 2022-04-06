@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gra kółko i krzyżyk</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #121212;
+        }
+        .game {
+            margin: 100px auto 0;
+            width: 300px;
+        }
+        .game .row div {
+            height: 100px;
+            width: 100px;
+            background: white;
+            margin: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-size: 42px;
+            font-family: Arial;
+        }
+        .game .row {
+            display: flex;
+        }
+        .window {
+            background-color: #3a3a3a;
+            padding: 50px;
+            display: inline-block;
+            float: right;
+            margin-top: -325px;
+            color: white;
+        }
+    </style>
+    <div class="game" onclick="move(event)">
+        <div class="row">
+            <div id="0"></div>
+            <div id="1"></div>
+            <div id="2"></div>
+        </div>
+        <div class="row">
+            <div id="3"></div>
+            <div id="4"></div>
+            <div id="5"></div>
+        </div>
+        <div class="row">
+            <div id="6"></div>
+            <div id="7"></div>
+            <div id="8"></div>
+        </div>
+    </div>
+    <div class="window">
+        <h2 id="playermove">Aktualny ruch: Gracz 1</h2>
+        <p id="gameMove"></p>
+        <h1 id="gameWin"></h1>
+        <p id="moveNumber">Aktualna kolejka: 1</p>
+        <h2>Gracz 1</h2>
+        <p id="winner1">Zwycięstw: </p>
+        <h2>Gracz 2</h2>
+        <p id="winner2">Zwycięstw: </p>
+        <input type="button" value="RESET" onclick="reset();" />
+        <input type="button" value="KEEP PLAYING" onclick="keepPlaying();" />
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
